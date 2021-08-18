@@ -1,1 +1,28 @@
-<h1>Hello: <%= @burgers %></h1>
+<div class="row">
+  <h1>Burgers</h1>
+  <hr>
+  <div class="col-md-3 sidebar">
+    <% if @burgers_top_five.any? %>
+    <div class="row">
+  <h2>Top Five Burgers</h2>
+      <ul>
+        <% @burgers_top_five.each do |burger| %>
+          <li><%=burger.fetch("name")%></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+    </div>
+  <div class="col main-content">
+    <% if @burgers.any? %>
+      <div class="row">
+        <% @burgers.each do |burger| %>
+          <li><%= link_to burger.fetch('name'), burger_path(burger) %></li>
+          <%= render :partial => "layouts/burger_card", :locals => {:burger => burger} %>
+        <% end %>
+      </div>
+    <% else %>
+      <p>There are no burgers yet.</p>
+    <% end %>
+  </div>
+</div>

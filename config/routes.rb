@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
 
-  get '/burger' => 'burgers#index'
+  get '/' => 'burgers#index'
 end
