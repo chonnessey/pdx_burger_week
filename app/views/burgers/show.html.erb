@@ -1,0 +1,17 @@
+<a href="/"><< Back to burgers</a>
+<h1><%= @burger.fetch("name")%> Burger</h1>
+<hr>
+<h2>Deets</h2>
+<ul>
+<li><strong>Description:</strong> <%= @burger.fetch("description")%></li>
+<li><strong>Insipiration:</strong> <%= @burger.fetch("inspiration")%></li>
+<li><strong>Drink Special:</strong> <% if @burger.fetch("drink_special") != ''%>
+  <%= @burger.fetch("drink_special")%>
+  <%else%>
+  No Drink Special :(
+  <%end%>
+  </li>
+<li><strong>Hours of Availability:</strong> <%= @burger.fetch("hours_of_availability")%></li>
+<li><strong>Location:</strong><%= @burger.fetch("location")%></li>
+<li><strong>Address:</strong> <%= @burger.fetch("address")%></li>
+</ul>

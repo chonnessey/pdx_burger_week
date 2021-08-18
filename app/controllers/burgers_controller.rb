@@ -8,7 +8,8 @@ class BurgersController < ApplicationController
   end
 
   def show
-    @burger = Burger.find(params[:id])
+    find_me = params[:id]
+    @burger = Burger.get_burger("burgers/#{find_me}")
     render :show
   end
 

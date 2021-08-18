@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy'
 
   get '/' => 'burgers#index'
+
+  resources :burgers do
+    resources :reviews
+  end
 end

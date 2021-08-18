@@ -1,7 +1,7 @@
 <div class="col-sm-4">
   <div class="card m-1">
     <div class="card-body">
-      <h5 class="card-title"><%=burger.fetch("name")%></h5>
+      <h5 class="card-title"><%= link_to burger.fetch('name'), burger_path(burger.fetch('id')) %></h5>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Location: <%=burger.fetch("location")%></li>

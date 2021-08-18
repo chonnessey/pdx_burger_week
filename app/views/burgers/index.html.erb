@@ -7,7 +7,7 @@
   <h2>Top Five Burgers</h2>
       <ul>
         <% @burgers_top_five.each do |burger| %>
-          <li><%=burger.fetch("name")%></li>
+          <li><%=link_to burger.fetch('name'), burger_path(burger.fetch('id'))%></li>
         <% end %>
       </ul>
     </div>
@@ -17,7 +17,6 @@
     <% if @burgers.any? %>
       <div class="row">
         <% @burgers.each do |burger| %>
-          <li><%= link_to burger.fetch('name'), burger_path(burger) %></li>
           <%= render :partial => "layouts/burger_card", :locals => {:burger => burger} %>
         <% end %>
       </div>
