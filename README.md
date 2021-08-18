@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+* as an admin I want to add, update and delete burgers.
+* as an admin I want to add and delete reviews.
+* as a user I want to view all burgers.
+* as a user I want to add reviews and be able to update and delete my own reviews.
