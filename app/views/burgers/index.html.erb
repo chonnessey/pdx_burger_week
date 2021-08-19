@@ -3,12 +3,14 @@
   <div class="col-md-3 sidebar">
     <% if @burgers_top_five.any? %>
     <div class="row">
+    <div class="col">
   <h2>Top Five Burgers</h2>
       <ul>
         <% @burgers_top_five.each do |burger| %>
           <li><%=link_to burger.fetch('name'), burger_path(burger.fetch('id'))%></li>
         <% end %>
       </ul>
+      </div>
     </div>
     <% end %>
     </div>

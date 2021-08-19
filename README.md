@@ -2,7 +2,7 @@
 ## By Adrian Camacho, Michael Reiersgaard, Arthur Lee :electric_plug:
 
 ---
-![I am GitHub Readme Generator's creator](https://i.ibb.co/BGjZXGY/Screen-Shot-2021-08-19-at-3-33-50-PM.png)
+![I am GitHub Readme Generator's creator](app/assets/images/pdx.png)
 
 ### Project Description :pencil:
 
