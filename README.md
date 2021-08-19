@@ -6,11 +6,13 @@
 
 ### Project Description :pencil:
 
-* This project is a mock burger site inspired by Portland's Burger Week. Our site uses our [Burger-API](https://pdx-burger-week-api.herokuapp.com/burgers/) that populates the data using both _factory bot_ and _faker_ Ruby gems. 
+* This project is a mock burger site inspired by Portland's Burger Week. Our site uses our [Burger-API](https://pdx-burger-week-api.herokuapp.com/burgers/) that populates the data using both _**factory bot**_ and _**faker**_ Ruby gems. 
 
 * The site allows admin users to view, update and delete burgers at their own free will!
 
 * As for regular users, you can add, update and delete your own reviews for a burger!
+
+* View our live site via Heroku at [Not!-PDX-Burger-Week](https://pdx-burger-week.herokuapp.com/).
 ---
 ### Tech Stack :floppy_disk:
 1. _Ruby 2.6.3_

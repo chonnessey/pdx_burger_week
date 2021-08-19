@@ -31,9 +31,9 @@
             </ul>
             <div id="user-info">
               <% if current_user %>
-                <%= current_user.email %> | <%= link_to "Sign out", '/users/sign_out', :method => :delete %>
+                <%= current_user.email %> | <%= link_to "Sign out", '/signout' %>
               <% else %>
-                <%= link_to "Sign up", '/users/sign_up' %> | <%= link_to "Sign in", '/users/sign_in'%>
+                <%= link_to "Sign up", '/signup' %> | <%= link_to "Sign in", '/signin'%>
               <% end %>
             </div>
           </div>
@@ -56,7 +56,7 @@
   </main>
   <footer class="footer mt-auto py-3 bg-light0" id="sticky-footer">
     <div class="container">
-      <span class="text-muted">Made, with hunger, by <a href="https://github.com/chonnessey">Adrian Camacho</a> and <a href="https://github.com/mireie">Michael Reiersgaard</a>. <a href="https://github.com/chonnessey/pdx_burger_week">View project on GitHub</a></span>
+      <span class="text-muted" style="display:flex">Made, with hunger, by <a href="https://github.com/chonnessey">Adrian Camacho</a>, <a href="https://github.com/mireie">Michael Reiersgaard</a>, and <a href="https://github.com/gengur123">Arthur Lee.</a> <span style="margin-left:auto"><a href="https://github.com/chonnessey/pdx_burger_week">View project on GitHub</a></span></span>
     </div>
   </footer>
 </body>
