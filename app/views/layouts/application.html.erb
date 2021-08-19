@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +14,10 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-<main class="flex-shrink-0">
-<div class="container">
-<div class="row">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <main class="flex-shrink-0">
+    <div class="container">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="/">{Not} PDX Burger Week!</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,10 +25,8 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <% if current_user && current_user.admin?%>
-            
-              <li class="nav-item nav-admin nav-link"><strong>Admin Controls</strong></li>
-              <li class="nav-item nav-admin"><%= link_to "Add Burger", new_burger_path,  class: "nav-link" %></li>
-
+                <li class="nav-item nav-admin nav-link"><strong>Admin Controls</strong></li>
+                <li class="nav-item nav-admin"><%= link_to "Add Burger", new_burger_path,  class: "nav-link" %></li>
               <%end%>
             </ul>
             <div id="user-info">
@@ -40,26 +38,27 @@
             </div>
           </div>
         </nav>
-  </div>
-  <%if flash[:alert] %>
-    <div class="alert alert-danger mt-3" role="alert">
-      <%= flash[:alert] %>
+      </div>
+      <%if flash[:alert] %>
+        <div class="alert alert-danger mt-3" role="alert">
+          <%= flash[:alert] %>
+        </div>
+      <%end%>
+      <%if flash[:notice] %>
+        <div class="alert alert-success mt-3" role="alert">
+          <%= flash[:notice] %>
+        </div>
+      <%end%>
+      <div class="row">
+        <%= yield %>
+      </div>
     </div>
-  <%end%>
-  <%if flash[:notice] %>
-    <div class="alert alert-success mt-3" role="alert">
-      <%= flash[:notice] %>
+  </main>
+  <footer class="footer mt-auto py-3 bg-light0" id="sticky-footer">
+    <div class="container">
+      <span class="text-muted">Made, with hunger, by <a href="https://github.com/https://github.com/chonnessey">Adrian Camacho</a> and <a href="https://github.com/mireie">Michael Reiersgaard</a>. <a href="https://github.com/chonnessey/pdx_burger_week">View project on GitHub</a></span>
     </div>
-  <%end%>
-  <div class="row">
-    <%= yield %>
-  </div>
-</div>
-</main>
-<footer class="footer mt-auto py-3 bg-light">
-  <div class="container">
-    <span class="text-muted">Made with hunger by Adrian Camacho and Michael Reiersgaard</span>
-  </div>
-</footer>
+  </footer>
 </body>
+
 </html>

@@ -2,6 +2,7 @@
 ## By Adrian Camacho, Michael Reiersgaard, Arthur Lee :electric_plug:
 
 ---
+![I am GitHub Readme Generator's creator](https://i.ibb.co/BGjZXGY/Screen-Shot-2021-08-19-at-3-33-50-PM.png)
 
 ### Project Description :pencil:
 
@@ -43,9 +44,9 @@
 ### Contact Info :inbox_tray:
 
 > You can reach us at: 
-> Adrian: <adriancamacho18@gmail.com> :rocket:
-> Michael: <michael.reiersgaard@gmail.com> :rocket:
-> Arthur: <meleearthur@gmail.com> :rocket:
+> * Adrian: <adriancamacho18@gmail.com> :rocket:
+> * Michael: <michael.reiersgaard@gmail.com> :rocket:
+> * Arthur: <meleearthur@gmail.com> :rocket:
 ___
 ### License is GPLv3 and I make no claim to copyright. :guardsman:
 <br />
