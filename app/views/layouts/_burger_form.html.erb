@@ -1,0 +1,17 @@
+<%= form_with url: "/burgers", method: :post do|f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+  <%= f.label :description %>
+  <%= f.text_area :description, class: "form-control" %>
+  <%= f.label :inspiration %>
+  <%= f.text_area :inspiration, class: "form-control" %>
+  <%= f.label :drink_special %>
+  <%= f.text_field :drink_special, class: "form-control" %>
+  <%= f.label :address %>
+  <%= f.text_field :address, class: "form-control" %>
+  <%= f.label :hours_of_availability %>
+  <%= f.text_field :hours_of_availability, class: "form-control" %>
+  <%= f.label :location %>
+  <%= f.text_field :location, class: "form-control" %>
+  <%= f.submit class: "btn btn-primary mt-3 mb-3" %>
+<%end%>

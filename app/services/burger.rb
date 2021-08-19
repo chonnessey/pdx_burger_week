@@ -14,5 +14,13 @@ class Burger
     @response = HTTParty.get("https://pdx-burger-week-api.herokuapp.com/burgers/#{burger_params}/reviews")
     JSON.parse(@response.body)
   end
+  
+  def self.post_burger(params)
+    HTTParty.post("https://pdx-burger-week-api.herokuapp.com/burgers", 
+        :body => params.to_json,
+        :headers => { 'Content-Type' => 'application/json' }
+    )
+  end
 
 end
+

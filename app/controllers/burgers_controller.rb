@@ -14,4 +14,9 @@ class BurgersController < ApplicationController
     render :show
   end
 
+  def create
+    @burger = Burger.post_burger(params)
+    redirect_to ('/')
+  end
+
 end
