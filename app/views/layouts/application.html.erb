@@ -13,8 +13,9 @@
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body>
-<div class="container" id="page-content">
+<body class="d-flex flex-column h-100">
+<main class="flex-shrink-0">
+<div class="container">
 <div class="row">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="/">{Not} PDX Burger Week!</a>
@@ -54,6 +55,7 @@
     <%= yield %>
   </div>
 </div>
+</main>
 <footer class="footer mt-auto py-3 bg-light">
   <div class="container">
     <span class="text-muted">Made with hunger by Adrian Camacho and Michael Reiersgaard</span>

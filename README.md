@@ -42,7 +42,10 @@
 ---
 ### Contact Info :inbox_tray:
 
-You can reach me at: <adriancamacho18@gmail.com> :rocket:
+> You can reach us at: 
+> Adrian: <adriancamacho18@gmail.com> :rocket:
+> Michael: <michael.reiersgaard@gmail.com> :rocket:
+> Arthur: <meleearthur@gmail.com> :rocket:
 ___
 ### License is GPLv3 and I make no claim to copyright. :guardsman:
 <br />
