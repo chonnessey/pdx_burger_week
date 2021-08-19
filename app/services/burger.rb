@@ -1,8 +1,9 @@
 class Burger
   attr_accessor :burger_me
-
-  def initialize(burger_me)
-    @burger_me = burger_me
+  
+  def new
+    @burger = Burger.new
+    render :new
   end
 
   def self.get_burger(burger_params)
@@ -22,5 +23,14 @@ class Burger
     )
   end
 
-end
+  def self.destroy_burger(params)
+    HTTParty.delete("https://pdx-burger-week-api.herokuapp.com/burgers/#{params[:id]}")
+  end
 
+  def self.update_burger(params)
+    HTTParty.put("https://pdx-burger-week-api.herokuapp.com/burgers/#{params[:id]}", 
+        :body => params.to_json,
+        :headers => { 'Content-Type' => 'application/json' }
+    )
+  end
+end

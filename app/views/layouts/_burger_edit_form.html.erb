@@ -1,0 +1,26 @@
+<%= form_with url: "/burgers/#{params[:id]}", method: :put do|f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control", :value => params[:name] %>
+  <%= f.label :description %>
+  <%= f.text_area :description, class: "form-control", :value => params[:description] %>
+  <%= f.label :inspiration %>
+  <%= f.text_area :inspiration, class: "form-control", :value => params[:inspiration] %>
+  <%= f.label :drink_special %>
+  <%= f.text_field :drink_special, class: "form-control", :value => params[:drink_special] %>
+  <%= f.label :address %>
+  <%= f.text_field :address, class: "form-control", :value => params[:address] %>
+  <%= f.label :hours_of_availability %>
+  <%= f.text_field :hours_of_availability, class: "form-control", :value => params[:hours_of_availability] %>
+  <%= f.label :location %>
+  <%= f.text_field :location, class: "form-control", :value => params[:location] %>
+  <%= f.submit class: "btn btn-primary mt-3 mb-3" %>
+<%end%>
+
+
+
+
+
+
+
+
+

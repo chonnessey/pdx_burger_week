@@ -22,16 +22,16 @@
       <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
     <% end %>
   </div>
-<%if flash[:alert] %>
-        <div class="alert alert-danger mt-3" role="alert">
-          <%= flash[:alert] %>
-        </div>
-      <%end%>
-      <%if flash[:notice] %>
-        <div class="alert alert-success mt-3" role="alert">
-          <%= flash[:notice] %>
-        </div>
-      <%end%>
+  <%if flash[:alert] %>
+    <div class="alert alert-danger mt-3" role="alert">
+      <%= flash[:alert] %>
+    </div>
+  <%end%>
+  <%if flash[:notice] %>
+    <div class="alert alert-success mt-3" role="alert">
+      <%= flash[:notice] %>
+    </div>
+  <%end%>
   <div class="row">
     <%= yield %>
   </div>

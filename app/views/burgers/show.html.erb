@@ -25,3 +25,13 @@
 <% else %>
   <p>There are no reviews yet.</p>
 <% end %>
+  <div class="row nav-admin">
+    <h3>Burger Admin Panel</h3>
+  <hr>
+    <div class="col">
+    <p><%= link_to "Update burger", edit_burger_path(@burger)%>
+      <p><%= link_to "Delete burger", burger_path(@burger),
+                        :data => {:confirm => "Are you sure?",
+                                       :method => "delete"} %></p>
+    </div>
+  </div>
