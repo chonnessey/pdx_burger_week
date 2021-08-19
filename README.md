@@ -34,16 +34,11 @@
 9. Once you find your _id_, save it into a variable ie: `admin = User.find(1)`.
 10. Update your admin attribute to true like this `admin.update({:admin => "true"})`
 11. Finally save your updated admin object with the command `admin.save` and you should be good to go!
-12. To run tests, run the command `rspec` in the project directory.
-13. Fill out the forms, explore and have fun!
+12. Fill out the forms, explore and have fun!
 ---
 ### Known Bugs :bug:
 1. No Known Bugs.
 2. Please open a pull request if you have any issues!
----
-### Test Suite/Specification :chart_with_upwards_trend:
-
-> See [spec folder](https://github.com/chonnessey/words/tree/main/spec) for rspec test suite which includes 23 passing tests. View test results from project directory by running `rspec`.
 ---
 ### Contact Info :inbox_tray:
 
