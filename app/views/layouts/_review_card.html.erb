@@ -1,0 +1,21 @@
+<div class="col-md-6">
+  <div class="card m-1">
+    <div class="card-body">
+      <h5 class="card-title"><%=review.fetch("author")%></h5>
+      <ul>
+        <h3><span style="color:#FFE356">
+            <% review.fetch("rating").to_i.times do %>
+              ★
+            <%end%>
+          </span>
+          <span style="color:#E1FAFD">
+            <%(5-review.fetch("rating").to_i).times do %>
+              ★
+            <%end%>
+          </span>
+        </h3>
+        <p><%=review.fetch("content")%></p>
+      </ul>
+    </div>
+  </div>
+</div>

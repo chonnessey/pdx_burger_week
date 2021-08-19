@@ -10,19 +10,9 @@ class Burger
     JSON.parse(@response.body)
   end
 
+  def self.get_burger_reviews(burger_params)
+    @response = HTTParty.get("https://pdx-burger-week-api.herokuapp.com/burgers/#{burger_params}/reviews")
+    JSON.parse(@response.body)
+  end
+
 end
-
-# class Art
-#   attr_accessor :art_me
-
-#   def initialize(art_me)
-#     @art_me = art_me
-#   end
-
-#   def get_art
-#     response = HTTParty.get('https://api.artic.edu/api/v1/artworks/search?q=' + @art_me + '')
-#     # response["data"][0]["thumbnail"]["lqip"]
-#     JSON.parse(response.body)["data"][0]["thumbnail"]["lqip"]
-#   end
-
-# end

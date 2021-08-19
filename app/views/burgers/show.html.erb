@@ -15,3 +15,13 @@
 <li><strong>Location:</strong><%= @burger.fetch("location")%></li>
 <li><strong>Address:</strong> <%= @burger.fetch("address")%></li>
 </ul>
+<h2>Reviews</h2>
+<% if @burger_reviews.any? %>
+  <div class="row">
+    <% @burger_reviews.each do |review| %>
+      <%= render :partial => "layouts/review_card", :locals => {:review => review} %>
+    <% end %>
+  </div>
+<% else %>
+  <p>There are no reviews yet.</p>
+<% end %>
