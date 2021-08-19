@@ -1,30 +1,54 @@
-# README
+# PDX Burger Week
+## By Adrian Camacho, Michael Reiersgaard, Arthur Lee :electric_plug:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+---
 
-Things you may want to cover:
+### Project Description :pencil:
 
-* Ruby version
+* This project is a mock burger site inspired by Portland's Burger Week. Our site uses our [Burger-API](https://pdx-burger-week-api.herokuapp.com/burgers/) that populates the data using both _factory bot_ and _faker_ Ruby gems. 
 
-* System dependencies
+* The site allows users to view, update and delete burgers at their own free will!
+---
+### Tech Stack :floppy_disk:
+1. _Ruby 2.6.3_
+2. _Rails 6.1.4_
+3. _Node.js_
+4. _Ruby gems_
+5. _HTML_
+6. _Bootstrap_
+7. _Scss_
+8. _Sass_
+9. _Postman_
+---
+### Installation Instructions :pushpin:
+1. Clone this repo: `https://github.com/chonnessey/pdx_burger_week.git`
+2. Enter new directory `cd directory`
+3. Install dependencies with the `bundle` command.
+4. Create a server side database with the command `rake db:create`.
+5. To run the Rails local server run the command `rails s` and then navigate to `localhost:3000`.
+6. Add, Update and Delete as many Burgers as you would like!
+---
+### Known Bugs :bug:
+1. No Known Bugs.
+2. Please open a pull request if you have any issues!
+---
+### Test Suite/Specification :chart_with_upwards_trend:
 
-* Configuration
+> See [spec folder](https://github.com/chonnessey/words/tree/main/spec) for rspec test suite which includes 23 passing tests. View test results from project directory by running `rspec`.
+---
+### Contact Info :inbox_tray:
 
-* Database creation
+You can reach me at: <adriancamacho18@gmail.com> :rocket:
+___
+### License is GPLv3 and I make no claim to copyright. :guardsman:
+<br />
 
-* Database initialization
+> You can't steal what is freely given. Enjoy!
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-* as an admin I want to add, update and delete burgers.
-* as an admin I want to add and delete reviews.
-* as a user I want to view all burgers.
-* as a user I want to add reviews and be able to update and delete my own reviews.
+<br />
+<br />
+<br />
+<br />
+<p align="center">
+  <small>Made in Portland, Oregon.</small>
+</p>
