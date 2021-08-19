@@ -16,14 +16,29 @@
 <body>
 <div class="container">
 <div class="row">
-<h2><a href="/">PDX Burger Week</a></h2>
-</div>
-  <div class="row">
-    <% if current_user %>
-      <%= current_user.email %> | <%= link_to "Sign out", '/signout' %>
-    <% else %>
-      <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
-    <% end %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="/">{Not} PDX Burger Week!</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <% if current_user && current_user.admin?%>
+            
+              <li class="nav-item nav-admin nav-link"><strong>Admin Controls</strong></li>
+              <li class="nav-item nav-admin"><%= link_to "Add Burger", new_burger_path,  class: "nav-link" %></li>
+
+              <%end%>
+            </ul>
+            <div id="user-info">
+              <% if current_user %>
+                <%= current_user.email %> | <%= link_to "Sign out", '/users/sign_out', :method => :delete %>
+              <% else %>
+                <%= link_to "Sign up", '/users/sign_up' %> | <%= link_to "Sign in", '/users/sign_in'%>
+              <% end %>
+            </div>
+          </div>
+        </nav>
   </div>
   <%if flash[:alert] %>
     <div class="alert alert-danger mt-3" role="alert">
@@ -39,5 +54,10 @@
     <%= yield %>
   </div>
 </div>
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <span class="text-muted">Made with hunger by Adrian Camacho and Michael Reiersgaard</span>
+  </div>
+</footer>
 </body>
 </html>

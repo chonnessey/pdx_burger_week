@@ -1,7 +1,5 @@
 <div class="row">
-  <h1>Burgers</h1>
   <hr>
-  <h2><%= link_to "Add a Burger", new_burger_path %></h2>
   <div class="col-md-3 sidebar">
     <% if @burgers_top_five.any? %>
     <div class="row">
@@ -17,6 +15,7 @@
   <div class="col main-content">
     <% if @burgers.any? %>
       <div class="row">
+      <h2>Available Burgers</h2>
         <% @burgers.each do |burger| %>
           <%= render :partial => "layouts/burger_card", :locals => {:burger => burger} %>
         <% end %>

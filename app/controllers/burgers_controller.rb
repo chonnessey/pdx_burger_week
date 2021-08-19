@@ -1,5 +1,7 @@
 class BurgersController < ApplicationController
   require 'burger'
+  before_action :authorize_admin, only: [:new, :create, :edit, :update, :destroy]
+
   
   def index
     @response = Burger.get_burger('burgers')
