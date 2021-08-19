@@ -1,5 +1,4 @@
 class Burger
-  attr_accessor :burger_me
   
   def new
     @burger = Burger.new

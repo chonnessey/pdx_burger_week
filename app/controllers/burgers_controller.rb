@@ -2,8 +2,9 @@ class BurgersController < ApplicationController
   require 'burger'
   
   def index
-    @burgers = Burger.get_burger('burgers')
-    @burgers_top_five = Burger.get_burger('burgers/top_five')
+    @response = Burger.get_burger('burgers')
+    @burgers = @response.sort_by! {|hsh| hsh.fetch("name")}
+    @burgers_top_five = Burger.get_burger('burgers/top_five').sort_by! {|hsh| hsh.fetch("name")}
     render :index
   end
 
