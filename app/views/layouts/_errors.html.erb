@@ -1,0 +1,10 @@
+<% if @burger.errors.any? %>
+  <div class="errors">
+    <h4>Please fix these errors:</h4>
+    <ul>
+      <% @burger.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

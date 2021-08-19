@@ -15,8 +15,14 @@ class BurgersController < ApplicationController
   end
 
   def create
-    @burger = Burger.post_burger(params)
-    redirect_to ('/')
+    @response = Burger.post_burger(params)
+    if @response.response.code === '201'
+      flash[:notice] = "Burger was successfully created."
+      # @burger = Burger.get_burger("burgers/#{JSON.parse(@response.body).fetch("id").to_s}")
+      redirect_to("/burgers/#{JSON.parse(@response.body).fetch("id").to_s}")
+    else
+      render :new
+    end
   end
 
 end
